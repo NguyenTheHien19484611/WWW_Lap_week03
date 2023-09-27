@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd">
+    <bean id="add1" class="vn.com.edu.iuh.fit.models.Address">
+        <property name="city" value="HCM"/>
+        <property name="country" value="VN"/>
+        <property name="state" value="SG"/>
+
+    </bean>
+    <bean id="add2" class="vn.com.edu.iuh.fit.models.Address">
+        <property name="city" value="Da Lat"/>
+        <property name="country" value="VN"/>
+        <property name="state" value="Lam Dong"/>
+
+    </bean>
+    <bean id="e1" class="vn.com.edu.iuh.fit.models.Employee">
+        <property name="id" value="1"/>
+        <property name="name" value="Nguyen The Hien"/>
+        <property name="address" ref="add2">
+        </property>
+
+    </bean>
+    <bean id="e2" class="vn.com.edu.iuh.fit.models.Employee">
+        <property name="id" value="2"/>
+        <property name="name" value="Nguyen Van A"/>
+        <property name="address" ref="add1">
+        </property>
+
+    </bean>
+</beans>
